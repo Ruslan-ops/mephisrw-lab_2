@@ -80,7 +80,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	{
 		lecturerLab2 := lab2.Group("/open", h.CheckSecondHeaderLecturer)
 		{
-			lecturerLab2.PATCH("", h.OpenLab2ForStudent)
+			lecturerLab2.POST("", h.OpenLab2ForStudent)
 		}
 
 		studentLab2 := lab2.Group("/variant")
